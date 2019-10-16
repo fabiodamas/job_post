@@ -1,6 +1,4 @@
-# Adonis fullstack application
-
-Application for manage Jobs.
+# Application for manage Jobs.
 
 
 Run the application with:
