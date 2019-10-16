@@ -1,12 +1,14 @@
 # Application for manage Jobs.
 
 
-# Instal o Server mysql with:
+# Instal the Server mysql with:
 ```bash
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456  -p 3306:3306 -d mysql:latest
 docker exec -it mysql bash
 mysql -uroot -p123456
-create database jobpostr;
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES
+CREATE DATABASE jobpostr;
 quit
 exit
 ```
@@ -14,6 +16,6 @@ exit
 # Run the application with:
 
 
-```bash
+```js
 adonis serve --dev
 ```
